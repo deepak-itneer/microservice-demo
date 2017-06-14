@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: microservice-demo
+  labels:
+    app: microservice-demo
+    tier: backend
+spec:
+  type: NodePort
+  ports:
+    # the port that this service should serve on
+  - port: 8080
+  selector:
+    app: microservice-demo
+    tier: backend
